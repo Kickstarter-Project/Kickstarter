@@ -1,1 +1,1 @@
-web: gunicorn kickstarter:APP
+web: waitress-serve --port=$PORT kickstarter:app
