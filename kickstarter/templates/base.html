@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='base.css')}}">
+
 <html>
 
   <head>
@@ -7,6 +9,11 @@
   </head>
 
   <body>
+    <style>
+        body {
+          background-color: rgba(131, 137, 185, 0.39);
+        }
+        </style>
     <article class="flex two" style="padding: 3em 1em;">
       {% block content %}
  
@@ -14,7 +21,7 @@
           <p>Campaign Name <input type = "text" name = "campaign_name" /></p>
           <p>Percent Pledged<input type = "number" name = "percentage_pledged" /></p>
           <p>Number of backers<input type = "number" name = "num_backers" /></p>
-          <p>Length of the campaign:<input type = "number" name = "campaign_length" /></p> </p>
+          <p>Length of the campaign (in days):<input type = "number" name = "campaign_length" /></p> </p>
           <label for="currency">Choose a currency:</label>
 <select name="currency" id="currency">
         <option value="USD">USD</option> 
@@ -57,5 +64,4 @@
       {% endblock %}
     </article>
   </body>
-
 </html>
