@@ -1,4 +1,7 @@
 from flask import Flask, render_template, request
+import pickle
+import numpy as np
+
 
 def create_app():
     # initializes our app
@@ -15,10 +18,13 @@ def create_app():
             return f"/data is accessed directly. Go to '/' to submit form"
         if request.method == 'POST':
             form_data = request.form
-            artist = request.form.get('artist', 'default')
-            track = request.form.get('track', 'default')
-            df = convert(artist, track)
-            rec = get_recommendation(artist, track)
-        return render_template('data.html', form_data=form_data, artist=artist, track=track, df=df, rec=rec)
+            campaign_name = request.form.get('campaign_name')
+            campaign_length = len(campaign_name)
+            percentage_pledged = request.form.get('percentage_pledged')
+            currency = request.form.get('currency')
+            category = request.form.get('category')
+            num_backers = request.form.get('num_backers')
+        return render_template('data.html', form_data=form_data, num_backers=num_backers, campaign_length=campaign_length, percentage_pledged=percentage_pledged, currency=currency, category=category)
 
     return app
+
