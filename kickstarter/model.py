@@ -1,9 +1,3 @@
-# WORKING DOCUMENT #
-''' This is me trying to understand the input for the model. 
-
-input_currency will not take a string value, nor will input_category
-
-need to reconnect with roger to discuss how to format user inputted data to fit with the model '''
 import pandas as pd
 import pickle 
 import joblib
