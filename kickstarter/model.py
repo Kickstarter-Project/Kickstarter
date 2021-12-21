@@ -8,13 +8,13 @@ import pandas as pd
 import pickle 
 import joblib
 
-category = 'Fashion'
-currency = 'USD'
-goal = 100
-month = 'july'
-backers= 1000
-campaign_length = 20
-campaign_name_length = 20
+# category = 'Fashion'
+# currency = 'USD'
+# goal = 100
+# month = 'july'
+# backers= 1000
+# campaign_length = 20
+# campaign_name_length = 20
 
 
 input_data = pd.DataFrame({'category':[category],'currency':[currency],
