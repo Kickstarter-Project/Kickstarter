@@ -20,8 +20,23 @@
         <form action="/data" method = "POST">
           <p>Campaign Name <input type = "text" name = "campaign_name" /></p>
           <p>Percent Pledged<input type = "number" name = "percentage_pledged" /></p>
-          <p>Number of backers<input type = "number" name = "num_backers" /></p>
+          <p>Number of Backers<input type = "number" name = "num_backers" /></p>
           <p>Length of the campaign (in days):<input type = "number" name = "campaign_length" /></p> </p>
+          <label for="launched">Choose the month the campaign was launched:</label>
+<select name="currency" id="currency">
+        <option value="January">january</option> 
+        <option value="February">february</option>
+        <option value="March">march</option>
+        <option value="April">april</option>
+        <option value="May">may</option>
+        <option value="June">june</option>
+        <option value="July">july</option>
+        <option value="August">august</option>
+        <option value="September">september</option>
+        <option value="October">october</option>
+        <option value="November">november</option>
+        <option value="December">december</option>
+        </select>
           <label for="currency">Choose a currency:</label>
 <select name="currency" id="currency">
         <option value="USD">USD</option> 

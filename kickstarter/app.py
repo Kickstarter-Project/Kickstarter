@@ -21,13 +21,16 @@ def create_app():
         if request.method == 'POST':
             form_data = request.form
             campaign_name = request.form.get('campaign_name')
+            campaign_name_length = len(campaign_name)
             campaign_length = request.form.get('campaign_length')
             percentage_pledged = request.form.get('percentage_pledged')
             currency = request.form.get('currency')
             category = request.form.get('category')
+            goal = request.form.get('goal')
             num_backers = request.form.get('num_backers')
             prediction = query_model(currency, category, campaign_length, percentage_pledged, num_backers)
-        return render_template('data.html', form_data=form_data, num_backers=num_backers, campaign_name=campaign_name, campaign_length=campaign_length, percentage_pledged=percentage_pledged, currency=currency, category=category, prediction=prediction)
+            month = request.form.get('month')
+        return render_template('data.html', form_data=form_data, goal=goal, month=month, campaign_name_length=campaign_name_length, num_backers=num_backers, campaign_name=campaign_name, campaign_length=campaign_length, percentage_pledged=percentage_pledged, currency=currency, category=category, prediction=prediction)
 
     return app
 
