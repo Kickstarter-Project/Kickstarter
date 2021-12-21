@@ -4,7 +4,7 @@ import numpy as np
 from numpy.lib.function_base import quantile
 from .model import model
 import pandas as pd
- 
+
 
 def create_app():
     # initializes our app

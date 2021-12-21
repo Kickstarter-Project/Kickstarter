@@ -64,4 +64,4 @@ model.fit(X_train,y_train)
 # test_acc = model.score(X_test, y_test)
 # print(test_acc)
 
-joblib.dump(model, "./random_forest_compress.joblib", compress=6)
+joblib.dump(model, "./random_forest_compressed.joblib", compress=6)
