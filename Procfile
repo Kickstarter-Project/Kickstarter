@@ -1,1 +1,1 @@
-web: waitress-serve --port=$PORT kickstarter:app
+web: gunicorn spotify_rec_app:APP -t 120
