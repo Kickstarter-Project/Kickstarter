@@ -12,6 +12,7 @@ scikit-learn = "*"
 gunicorn = "*"
 colorama = "*"
 joblib = "*"
+jinja2 = "*"
 
 [dev-packages]
 
