@@ -7,7 +7,7 @@ from category_encoders import OrdinalEncoder
 import pickle
 import joblib
 
-df=pd.read_csv('kickstarter/ks-projects-201801.csv',
+df=pd.read_csv('../ks-projects-201801.csv',
                parse_dates=['deadline','launched'],
                usecols=['name','main_category','launched',
                         'deadline','currency','goal',
@@ -52,16 +52,16 @@ X_train, X_test, y_train, y_test=train_test_split(X,y, random_state=42,test_size
 model=make_pipeline(
                     OrdinalEncoder(),
                     SimpleImputer(strategy="mean"),
-                    RandomForestClassifier(max_depth=50,n_estimators=150)
+                    RandomForestClassifier(max_depth=10,n_estimators=150)
                     )
 
 model.fit(X_train,y_train)
 
-#pickle.dump(model,open('rf_model_pickle_2','wb'))
+# pickle.dump(model,open('rf_model_pickle_2.pkl','wb'))
 
 # training_acc = model.score(X_train, y_train)
 # print(training_acc)
 # test_acc = model.score(X_test, y_test)
 # print(test_acc)
 
-joblib.dump(model, "./random_forest_compressed.joblib", compress=6)
+# joblib.dump(model, "./random_forest_compressed.joblib", compress=3)
