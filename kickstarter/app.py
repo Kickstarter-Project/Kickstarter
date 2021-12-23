@@ -4,20 +4,29 @@ import pandas as pd
 
 
 def create_app():
-    '''
+    '''Creates the application and displays it
+
+    :returns: the flask appliction
+    :rtype: flask app
     '''
     app = Flask(__name__)
     app.static_folder = 'static'
 
     @app.route('/')
     def form():
-        '''
+        ''' Creates the homepage
+
+        :returns: renders the template for the page
+        :rtype: html page via flask application
         '''
         return render_template('base.html', title="Kickstarter campaign")
 
     @app.route('/data', methods=['POST', 'GET'])
     def data():
-        '''
+        '''Creates the page that takes in user input , feeds through rf_model_pickle_2
+           and returns a display of the prediction to the user via html page
+        :returns: input outcome
+        :rtype: html page
         '''
         if request.method == 'GET':
             return "/data is accessed directly. Go to '/' to submit form"
@@ -58,6 +67,8 @@ def create_app():
     @app.route('/features')
     def vis():
         '''
+        :returns:
+        :rtype: html page
         '''
         return render_template('index.html')
 
