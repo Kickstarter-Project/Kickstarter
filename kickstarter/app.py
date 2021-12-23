@@ -48,6 +48,9 @@ def create_app():
                                currency=currency, 
                                category=category, 
                                prediction=prediction)
+    @app.route('/features')
+    def vis():
+        return render_template('index.html')
 
     return app
 
