@@ -36,7 +36,6 @@ Frameworks & libraries used to bootstrap this project.
 * [pandas](https://pandas.pydata.org)
 * [numpy](https://numpy.org)
 * [flask](https://flask.palletsprojects.com/en/2.0.x/)
-* [joblib](https://joblib.readthedocs.io/en/latest/)
 * [pickle](https://docs.python.org/3/library/pickle.html)
 * [requests](https://docs.python-requests.org/en/latest/)
 * [scikit-learn](https://scikit-learn.org/stable/)
