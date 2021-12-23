@@ -1,26 +1,14 @@
-import pickle 
-# import joblib
-# import pandas as pd
+import pickle
 
-# Placeholders to initialize model
-# category = 'Fashion'
-# currency = 'USD'
-# goal = 1000
-# month = 'july'
-# backers= 10
-# campaign_length = 20
-# campaign_name_length = 20
-
-
-# input_data = pd.DataFrame({'category':[category],'currency':[currency],
-#            'goal':[goal],'launched':[month],'backers':[backers],
-#            'campaign_length':[campaign_length],'name_char_length':[campaign_name_length]})
 
 def model(input_data):
+    ''' Takes user input and returns prediciton
+
+    :param input_data:
+    :type: pandas dataframe
+    :returns: given input data, 1 or 0 based on pickled model
+    :rtype: array 1 or 0
+    '''
     rf = pickle.load(open('rf_model_pickle_2.pkl', 'rb'))
     pred = rf.predict(input_data)
     return pred
-
-# print(model(input_data))
-
-junk = "testing githubpush"
