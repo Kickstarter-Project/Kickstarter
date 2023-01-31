@@ -53,11 +53,7 @@ This is how you may run the web application locally , as a flask app. Alternativ
 
   The web application for this github repo can be found at:
 
-  <a href="https://kick-starter4.herokuapp.com">
-  <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
-</a>
-
-
+[kickstarter-success](https://kickstarter-success.onrender.com/)
 
 ### Installation
 
